@@ -25,14 +25,20 @@
       function initMap(){
         //map options
         var options = {
-          zoom:8,
+          zoom:12,
           center:{lat: 52.379279, lng: 4.879431}
         }
 
         // New map
       var map = new 
       google.maps.Map(document.getElementById('map'), options);
-      
+
+      //Add marker
+      var marker = new google.maps.Marker({
+        postion:{lat: 53.379279, lng: 4.979431}
+        map:map
+      });
+
       }
 
     </script>
