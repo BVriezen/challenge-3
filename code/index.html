@@ -171,7 +171,7 @@
       });
 
       var infoWindow2 = new google.maps.InfoWindow({
-        content: '<div class="imgB2"></div>, <h3 class="markerH">Samba School Dino</h3>, <h4 class="subbText">Voor ruimtereizigers met dorst</h4>'
+        content: '<div class="imgA"></div>, <h3 class="markerH">Samba School Dino</h3>, <h4 class="subbText">Omdat aliens alleen de Tango kennen</h4>'
       });
 
       markerTwee.addListener('click', function(){
@@ -186,6 +186,14 @@
       icon: 'images/pine.png'
       });
 
+      var infoWindow3 = new google.maps.InfoWindow({
+        content: '<div class="imgC"></div>, <h3 class="markerH">Fruitboer Henk</h3>, <h4 class="subbText">Ananassen verbouwen op Mars,<br /> lastiger dan je denkt</h4>'
+      });
+
+      markerDrie.addListener('click', function(){
+        infoWindow3.open(map, markerDrie);
+      });
+
       // Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY
 
       var markerVier = new google.maps.Marker({
@@ -194,12 +202,28 @@
       icon: 'images/shuttle.png'
       });
 
+      var infoWindow4 = new google.maps.InfoWindow({
+        content: '<div class="imgD"></div>, <h3 class="markerH">Landingsplaats</h3>, <h4 class="subbText">Liever in het Markemeer dan <br />in de Wallen</h4>'
+      });
+
+      markerVier.addListener('click', function(){
+        infoWindow4.open(map, markerVier);
+      });
+
       // Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
 
       var markerVijf = new google.maps.Marker({
       position: marker5,
       map: map,
       icon: 'images/flower.png'
+      });
+
+      var infoWindow5 = new google.maps.InfoWindow({
+        content: '<div class="imgE"></div>, <h3 class="markerH">Bloemenzaak<br />Ridderspoor</h3>, <h4 class="subbText">Eén jaar weggeweest,<br />tijd om op te fleuren</h4>'
+      });
+
+      markerVijf.addListener('click', function(){
+        infoWindow5.open(map, markerVijf);
       });
 }
 

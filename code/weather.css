@@ -83,10 +83,31 @@ img {
 	background-repeat: no-repeat;
 }
 
-.imgB2{
+.imgA{
 	width: 200px;
 	height: 200px;
-	bbackground-image: url(images/ballen.png);
+	background-image: url(images/ballen.png);
+	background-repeat: no-repeat;
+}
+
+.imgC{
+	width: 200px;
+	height: 200px;
+	background-image: url(images/fruit.jpg);
+	background-repeat: no-repeat;
+}
+
+.imgD{
+	width: 200px;
+	height: 200px;
+	background-image: url(images/raket.jpg);
+	background-repeat: no-repeat;
+}
+
+.imgE{
+	width: 200px;
+	height: 200px;
+	background-image: url(images/ridderSpoor.jpeg);
 	background-repeat: no-repeat;
 }
 
