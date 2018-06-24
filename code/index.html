@@ -12,7 +12,7 @@
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
-        height: 100%;
+        height: 80%;
         margin: 0;
         padding: 0;
       }
@@ -20,26 +20,131 @@
   </head>
   <body>
     <div id="map"></div>
+    <div class="container">
+  
+      <h2 id="city">Leeds</h2>
+  
+      <div class="middle">
+        <img src="" alt="icon" id="icon">
+        <div class="degrees">
+        <h1 id="temp">19</h1>
+        <span>&#176;</span>
+        </div>
+        <h3 id="desc">Sunny</h3>
+  </div>
+  
+</div>
     <script>
 
-      function initMap(){
-        //map options
-        var options = {
-          zoom:12,
-          center:{lat: 52.379279, lng: 4.879431}
-        }
+      function initMap() {
 
-        // New map
-      var map = new 
-      google.maps.Map(document.getElementById('map'), options);
+      var marker1 = {lat: 52.379800, lng: 4.879600};
+      var marker2 = {lat: 52.344100, lng: 4.899999900};
+      var marker3 = {lat: 52.399800, lng: 4.8979600};
 
-      //Add marker
-      var marker = new google.maps.Marker({
-        postion:{lat: 53.379279, lng: 4.979431}
-        map:map
+
+      //Functions for Map
+      var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: {lat: 52.379279, lng: 4.879431},
+      styles: [
+            {elementType: 'geometry', stylers: [{color: '#000000'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#FFEFD5'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#FFFFE0'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#48D1CC'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#DB7093'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#800000'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#E0FFFF'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#4169E1'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#FF1493'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#F0FFF0'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#FFB6C1'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#FAFAD2'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#87CEFA'}]
+            }
+          ]
       });
 
-      }
+      //Marker + Functions
+      var marker = new google.maps.Marker({
+      position: marker1,
+      map: map
+      });
+
+      var markerTwee = new google.maps.Marker({
+      position: marker2,
+      map: map
+      });
+
+      var markerDrie = new google.maps.Marker({
+      position: marker3,
+      map: map
+      });
+}
 
     </script>
      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn0Uxx0pWGvYgE2xalFz6adzhyBlqVf5I&callback=initMap"
