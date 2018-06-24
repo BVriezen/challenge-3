@@ -1,9 +1,10 @@
 h1 , h2, h3, span {
 	margin: 0;
+	color: white;
 }
 
 h1 {
-	font-size: 16rem;
+	font-size: 6rem;
 }
 
 h2 {
@@ -20,14 +21,15 @@ span {
 }
 
 .container {
-	max-width: 550px;
-	height: 100vh;
-	border: 1px solid black;
+	max-width: 400px;
+	height: 40vh;
+	border: 0px solid black;
 	margin: 0 auto;
 	text-align: center;
 	display: grid;
 	grid-template-rows: 20% 80%;
 	padding: 25px 5px;
+	background-color: #1E90FF;
 }
 
 .degrees {
@@ -38,6 +40,8 @@ span {
 }
 
 img {
-	width: 80px;
-	filter: grayscale(100%);
+	width: 90px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	/*filter: grayscale(100%);*/
 }

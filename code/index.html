@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="weather.css" type="text/css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="sunny.js"></script>
     <title>Styled Maps - Night Mode</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
@@ -49,8 +52,8 @@
       center: {lat: 52.379279, lng: 4.879431},
       styles: [
             {elementType: 'geometry', stylers: [{color: '#000000'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#FFEFD5'}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#6495ED'}]},
             {
               featureType: 'administrative.locality',
               elementType: 'labels.text.fill',
@@ -59,7 +62,7 @@
             {
               featureType: 'poi',
               elementType: 'labels.text.fill',
-              stylers: [{color: '#FFFFE0'}]
+              stylers: [{color: '#'}]
             },
             {
               featureType: 'poi.park',
@@ -128,21 +131,30 @@
             }
           ]
       });
-
+ 
+      //Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY
+      
       //Marker + Functions
       var marker = new google.maps.Marker({
       position: marker1,
-      map: map
+      map: map,
+      icon: 'images/beer.png'
       });
+
+      // Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY
 
       var markerTwee = new google.maps.Marker({
       position: marker2,
-      map: map
+      map: map,
+      icon: 'images/samba.png'
       });
+
+      // Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY
 
       var markerDrie = new google.maps.Marker({
       position: marker3,
-      map: map
+      map: map,
+      icon: 'images/pine.png'
       });
 }
 
