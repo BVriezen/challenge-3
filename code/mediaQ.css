@@ -1,0 +1,31 @@
+@media only screen and (min-width: 1px){
+	#ruimte{
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 780px){
+	
+	body{
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	#ruimte{
+		display: initial;
+	}
+
+	#intro{
+		margin-bottom: 60px;
+	}
+}
+
+@media only screen and (min-width: 1150px){
+	body{
+		display: initial;
+	}
+
+	#intro{
+		margin-bottom: -20px;
+	}
+}

@@ -2,8 +2,10 @@
 <html>
   <head>
     <link href="weather.css" type="text/css" rel="stylesheet" />
+    <link href="mediaQ.css" type="text/css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="sunny.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <title>Styled Maps - Night Mode</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
@@ -22,7 +24,15 @@
     </style>
   </head>
   <body>
-    <div id="map"></div>
+    <div id="rond">
+      <h1 id="intro">Spots of Amsterdam and the Weather</h1>
+    </div>
+    <h1 id="ruimte">Some text</h1>
+
+    <!-- <div class="mainContainer"> -->
+    <div id="map">
+    </div>
+
     <div class="container">
   
       <h2 id="city">Leeds</h2>
@@ -34,9 +44,10 @@
         <span>&#176;</span>
         </div>
         <h3 id="desc">Sunny</h3>
-  </div>
+    </div>
   
-</div>
+  </div>
+<!-- </div> -->
     <script>
 
       function initMap() {
@@ -44,6 +55,8 @@
       var marker1 = {lat: 52.379800, lng: 4.879600};
       var marker2 = {lat: 52.344100, lng: 4.899999900};
       var marker3 = {lat: 52.399800, lng: 4.8979600};
+      var marker4 = {lat: 52.399100, lng: 5.06999900};
+      var marker5 = {lat: 52.364100, lng: 4.759999900};
 
 
       //Functions for Map
@@ -52,7 +65,7 @@
       center: {lat: 52.379279, lng: 4.879431},
       styles: [
             {elementType: 'geometry', stylers: [{color: '#000000'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#000000'}]},
             {elementType: 'labels.text.fill', stylers: [{color: '#6495ED'}]},
             {
               featureType: 'administrative.locality',
@@ -141,6 +154,14 @@
       icon: 'images/beer.png'
       });
 
+      var infoWindow = new google.maps.InfoWindow({
+        content: '<div class="imgB"></div>, <h3 class="markerH">Beer & Bangel</h3>, <h4 class="subbText">Voor ruimtereizigers met dorst</h4>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+
       // Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY
 
       var markerTwee = new google.maps.Marker({
@@ -149,12 +170,36 @@
       icon: 'images/samba.png'
       });
 
+      var infoWindow2 = new google.maps.InfoWindow({
+        content: '<div class="imgB2"></div>, <h3 class="markerH">Samba School Dino</h3>, <h4 class="subbText">Voor ruimtereizigers met dorst</h4>'
+      });
+
+      markerTwee.addListener('click', function(){
+        infoWindow2.open(map, markerTwee);
+      });
+
       // Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY
 
       var markerDrie = new google.maps.Marker({
       position: marker3,
       map: map,
       icon: 'images/pine.png'
+      });
+
+      // Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY
+
+      var markerVier = new google.maps.Marker({
+      position: marker4,
+      map: map,
+      icon: 'images/shuttle.png'
+      });
+
+      // Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+
+      var markerVijf = new google.maps.Marker({
+      position: marker5,
+      map: map,
+      icon: 'images/flower.png'
       });
 }
 

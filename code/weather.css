@@ -1,6 +1,8 @@
 h1 , h2, h3, span {
 	margin: 0;
 	color: white;
+	font-family: Roboto;
+	font-weight: 300;
 }
 
 h1 {
@@ -21,8 +23,8 @@ span {
 }
 
 .container {
-	max-width: 400px;
-	height: 40vh;
+	width: 100%;
+	height: 50vh;
 	border: 0px solid black;
 	margin: 0 auto;
 	text-align: center;
@@ -44,4 +46,50 @@ img {
 	margin-top: 10px;
 	margin-bottom: 0px;
 	/*filter: grayscale(100%);*/
+}
+
+#intro{
+	color: white;
+	font-family: Roboto;
+	font-weight: 700;
+	margin-top: 10px;
+	font-size: 45px;
+	text-align: center;
+}
+
+#ruimte{
+	color: #34352D;
+	font-family: Roboto;
+	font-weight: 300;
+	font-size: 45px;
+}
+
+.markerH{
+	color: #DC143C;
+	margin-top: -10px;
+	font-family: Roboto;
+}
+
+.subbText{
+	margin-top: -10px;
+	font-family: Roboto;
+	font-weight: 300;
+}
+
+.imgB{
+	width: 200px;
+	height: 200px;
+	background-image: url(images/beerImg.jpg);
+	background-repeat: no-repeat;
+}
+
+.imgB2{
+	width: 200px;
+	height: 200px;
+	bbackground-image: url(images/ballen.png);
+	background-repeat: no-repeat;
+}
+
+body{
+	background-color: #34352D;
 }
